@@ -8,5 +8,14 @@ const user = {
         console.log(`${this.name} has been deactivate.`);
     },
 };
-user.deactivate();
-console.log(user.isActive);
+const product = {
+    name: "i phone 17 pro",
+    price: 15000000,
+    inStock: true,
+    sell() {
+        this.inStock = false;
+        console.log(`${this.name} is not available.`);
+    },
+};
+product.sell();
+console.log(product.inStock);
