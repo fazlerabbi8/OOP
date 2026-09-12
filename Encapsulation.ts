@@ -26,4 +26,32 @@ class BankAccount {
 const account = new BankAccount("Fazle Rabbi",1000);
 account.deposit(1000);
 // account.withdraw(1000);
-console.log(account.getBalance());
+// console.log(account.getBalance());
+
+
+// problem 
+
+
+class Employee {
+    private salary: number;
+
+    constructor(public name: string, initialSalary: number){
+        this.salary = initialSalary;
+    }
+
+    raiseSalary(amount: number): void {
+        if(amount <= 0){
+            throw new Error("Salary must be positive.")
+        }
+        this.salary += amount;
+    }
+
+    getSalary(): number {
+        return this.salary;
+    }
+}
+
+
+const salaryAmount = new Employee("Fazle Rabbi", 1000000);
+salaryAmount.raiseSalary(1000000);
+console.log(salaryAmount.getSalary());
