@@ -47,12 +47,42 @@ class Manager extends Employee {
   }
 }
 
-const manager = new Manager("Alom", 10000000, "Engineering");
+// const manager = new Manager("Alom", 10000000, "Engineering");
 
-manager.addTeamMember("Ali");
-manager.addTeamMember("jabi");
-manager.addTeamMember("monir");
-manager.addTeamMember("roni");
-manager.addTeamMember("rakib");
-manager.raiseSalary(2000000);
-console.log(manager.describe());
+// manager.addTeamMember("Ali");
+// manager.addTeamMember("jabi");
+// manager.addTeamMember("monir");
+// manager.addTeamMember("roni");
+// manager.addTeamMember("rakib");
+// manager.raiseSalary(2000000);
+// console.log(manager.describe());
+
+
+// problem 2
+class Intern extends Employee {
+  constructor(
+    name: string,
+    initialSalary: number,
+    protected mentor: string
+  ) {
+    super(name, initialSalary);
+  }
+
+  checkInWithMentor(): void {
+    console.log(
+      `${this.name} is checking in with mentor ${this.mentor}.`
+    );
+  }
+
+  describe(): string {
+    return `${super.describe()} and is mentored by ${this.mentor}`;
+  }
+}
+
+const intern = new Intern("Fazle", 10000000, "Jahid");
+
+intern.checkInWithMentor();
+
+intern.raiseSalary(10000000);
+
+console.log(intern.describe());
