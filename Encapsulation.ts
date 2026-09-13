@@ -52,6 +52,6 @@ class Employee {
 }
 
 
-const salaryAmount = new Employee("Fazle Rabbi", 1000000);
-salaryAmount.raiseSalary(1000000);
-console.log(salaryAmount.getSalary());
+const employee  = new Employee("Fazle Rabbi", 1000000);
+employee.raiseSalary(1000000);
+console.log(employee .getSalary());
