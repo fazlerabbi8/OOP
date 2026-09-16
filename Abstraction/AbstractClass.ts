@@ -14,3 +14,10 @@ class CreditCardPayment extends PaymentMethod{
         console.log(`Charged $${this.amount} to credit card.`);
     }
 }
+
+class PayPalPayment extends PaymentMethod {
+  processPayment(): void {
+    this.logTransaction();
+    console.log(`Sent $${this.amount} via PayPal.`);
+  }
+}
