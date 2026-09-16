@@ -21,3 +21,11 @@ class PayPalPayment extends PaymentMethod {
     console.log(`Sent $${this.amount} via PayPal.`);
   }
 }
+
+
+function checkout(payment: PaymentMethod): void{
+    payment.processPayment();
+}
+
+checkout(new CreditCardPayment(1000));
+checkout(new PayPalPayment(500));
