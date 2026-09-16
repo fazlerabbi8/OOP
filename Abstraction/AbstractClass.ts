@@ -7,3 +7,10 @@ abstract class PaymentMethod {
         console.log(`Processing payment of $${this.amount}`);
     }
 }
+
+class CreditCardPayment extends PaymentMethod{
+    processPayment(): void {
+        this.logTransaction();
+        console.log(`Charged $${this.amount} to credit card.`);
+    }
+}
