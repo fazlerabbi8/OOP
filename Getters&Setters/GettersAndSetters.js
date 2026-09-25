@@ -20,3 +20,4 @@ const employee = new Employee("Fazle Rabbi", 10000000);
 console.log(employee.salary);
 employee.salary = 12000000;
 console.log(employee.salary);
+
